@@ -219,6 +219,9 @@
 
 -(void) letsPickingNumbers {
     
+    [self.navigationItem setHidesBackButton:NO animated:YES];
+
+    
     NSUserDefaults *lang = [NSUserDefaults standardUserDefaults];
     int language = [lang integerForKey:@"language"];
     
@@ -478,6 +481,9 @@
 }
 
 -(void)btnAgain:(id)sender {
+    
+    [self.navigationItem setHidesBackButton:YES animated:YES];
+
     
     NSUserDefaults *lang = [NSUserDefaults standardUserDefaults];
     int language = [lang integerForKey:@"language"];
