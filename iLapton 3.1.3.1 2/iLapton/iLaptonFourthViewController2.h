@@ -26,11 +26,11 @@
     UIButton *offButton;
     UIImageView *onView;
     UIImageView *offView;
-    NSString *string_aux_1; 
-    NSString *string_aux_2;
-    NSString *string_aux_3;
-    NSString *string_aux_4;
-    NSString *string_aux_5;
+    //NSString *string_aux_1;
+   // NSString *string_aux_2;
+   // NSString *string_aux_3;
+   // NSString *string_aux_4;
+   // NSString *string_aux_5;
 
     int counter;
     
@@ -41,11 +41,11 @@
     int maxBlink4;
     int maxBlink5;
 
-    NSNumber *maxBlink1_num;
-    NSNumber *maxBlink2_num;
-    NSNumber *maxBlink3_num;
-    NSNumber *maxBlink4_num;
-    NSNumber *maxBlink5_num;
+    //NSNumber *maxBlink1_num;
+    //NSNumber *maxBlink2_num;
+    //NSNumber *maxBlink3_num;
+    //NSNumber *maxBlink4_num;
+    //NSNumber *maxBlink5_num;
     NSNumber *finalScore_num;
 
 
