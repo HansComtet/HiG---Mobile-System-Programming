@@ -248,7 +248,213 @@
 
 - (IBAction)checkAction{
     
+    NSInteger column1;
+    NSInteger column2;
+    NSInteger column3;
+    //NSInteger column4;
+    //NSInteger column5;
+
+    column1 = [picker selectedRowInComponent:0] + 1;
+    column2 = [picker selectedRowInComponent:1] + 1;
+    column3 = [picker selectedRowInComponent:2] + 1;
+    //column4 = [picker selectedRowInComponent:3];
+    //column5 = [picker selectedRowInComponent:4];
+    
+    NSLog(@"111111: %i", column1);
+    NSLog(@"222222: %i", column2);
+    NSLog(@"333333: %i", column3);
+
+    
+    
+    
+    //It depends on the level so..
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSString *number_of_level = [prefs stringForKey:@"Level"];
+    
+    
+    
+    if (number_of_level == @"1") { // LEVEL 1
+        
+        //Convert int to NSInteger, then convert int to string
+        maxBlink1_num = [[NSNumber alloc] initWithInt:maxBlink1];
+        string_aux_1 = [maxBlink1_num stringValue];
+        maxBlink2_num = [[NSNumber alloc] initWithInt:maxBlink2];
+        string_aux_2 = [maxBlink2_num stringValue];
+        maxBlink3_num = [[NSNumber alloc] initWithInt:maxBlink3];
+        string_aux_3 = [maxBlink3_num stringValue];
+        
+        
+        NSLog(@"aux1: %@", string_aux_1);
+        NSLog(@"aux2: %@", string_aux_2);
+        NSLog(@"aux3: %@", string_aux_3);
+        
+            if (column1 == maxBlink1){
+                score1 = 33;
+            }
+            else
+                score1 = 0;
+        
+        
+        if (column2 == maxBlink2){
+            score2 = 33;
+        }
+        else
+            score2 = 0;
+        }
+    
+        if (component == 2) {
+            if ([ [data3 objectAtIndex:row] isEqualToString: (string_aux_3) ] ){
+                
+                score3 = 36;
+                //NSLog(@"score 1: ,%i",score1);
+            }
+            else
+                score3 = 0;
+        }
+        
+        finalScore = score1 + score2 + score3 - penaltyPoints;
+        NSLog(@"finalScore: %i", finalScore);
+        if (finalScore == 99) finalScore = 100;
+        
+    } else if (number_of_level == @"2") { // LEVEL 2
+        
+        //Convert int to NSInteger, then convert int to string
+        maxBlink1_num = [[NSNumber alloc] initWithInt:maxBlink1];
+        string_aux_1 = [maxBlink1_num stringValue];
+        maxBlink2_num = [[NSNumber alloc] initWithInt:maxBlink2];
+        string_aux_2 = [maxBlink2_num stringValue];
+        maxBlink3_num = [[NSNumber alloc] initWithInt:maxBlink3];
+        string_aux_3 = [maxBlink3_num stringValue];
+        maxBlink4_num = [[NSNumber alloc] initWithInt:maxBlink4];
+        string_aux_4 = [maxBlink4_num stringValue];
+        
+        
+        
+        if (component == 0) {
+            if ([ [data1 objectAtIndex:row] isEqualToString: (string_aux_1) ] ){
+                
+                score1 = 25;
+                //NSLog(@"score 1: ,%i",score1);
+            }
+            else
+                score1 = 0;
+        }
+        
+        if (component == 1) {
+            if ([ [data2 objectAtIndex:row] isEqualToString: (string_aux_2) ] ){
+                
+                score2 = 25;
+                //NSLog(@"score 1: ,%i",score1);
+            }
+            else
+                score2 = 0;
+        }
+        
+        if (component == 2) {
+            if ([ [data3 objectAtIndex:row] isEqualToString: (string_aux_3) ] ){
+                
+                score3 = 25;
+                //NSLog(@"score 1: ,%i",score1);
+            }
+            else
+                score3 = 0;
+        }
+        if (component == 3) {
+            if ([ [data4 objectAtIndex:row] isEqualToString: (string_aux_4) ] ){
+                
+                score4 = 25;
+                //NSLog(@"score 1: ,%i",score1);
+            }
+            else
+                score4 = 0;
+        }
+        
+        finalScore = score1 + score2 + score3 + score4 - penaltyPoints;
+        
+        
+        
+    }
+    
+    // not working yet
+    else if (number_of_level == @"3") {
+        
+        //Convert int to NSInteger, then convert int to string
+        maxBlink1_num = [[NSNumber alloc] initWithInt:maxBlink1];
+        string_aux_1 = [maxBlink1_num stringValue];
+        maxBlink2_num = [[NSNumber alloc] initWithInt:maxBlink2];
+        string_aux_2 = [maxBlink2_num stringValue];
+        maxBlink3_num = [[NSNumber alloc] initWithInt:maxBlink3];
+        string_aux_3 = [maxBlink3_num stringValue];
+        maxBlink4_num = [[NSNumber alloc] initWithInt:maxBlink4];
+        string_aux_4 = [maxBlink4_num stringValue];
+        maxBlink5_num = [[NSNumber alloc] initWithInt:maxBlink5];
+        string_aux_5 = [maxBlink5_num stringValue];
+        
+        
+        if (component == 0) {
+            if ([ [data1 objectAtIndex:row] isEqualToString: (string_aux_1) ] ){
+                
+                score1 = 20;
+                //NSLog(@"score 1: ,%i",score1);
+            }
+            else
+                score1 = 0;
+        }
+        
+        if (component == 1) {
+            if ([ [data2 objectAtIndex:row] isEqualToString: (string_aux_2) ] ){
+                
+                score2 = 20;
+                //NSLog(@"score 1: ,%i",score1);
+            }
+            else
+                score2 = 0;
+        }
+        
+        if (component == 2) {
+            if ([ [data3 objectAtIndex:row] isEqualToString: (string_aux_3) ] ){
+                
+                score3 = 20;
+                //NSLog(@"score 1: ,%i",score1);
+            }
+            else
+                score3 = 0;
+        }
+        if (component == 3) {
+            if ([ [data4 objectAtIndex:row] isEqualToString: (string_aux_4) ] ){
+                
+                score4 = 20;
+                //NSLog(@"score 1: ,%i",score1);
+            }
+            else
+                score4 = 0;
+        }
+        if (component == 4) {
+            if ([ [data5 objectAtIndex:row] isEqualToString: (string_aux_5) ] ){
+                
+                score5 = 20;
+                //NSLog(@"score 1: ,%i",score1);
+            }
+            else
+                score5 = 0;
+        }
+        
+        finalScore = score1 + score2 + score3 + score4 + score5 - penaltyPoints;
+        
+        
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
     NSLog(@"Final score: %i",finalScore);
+    
+    
     
     // Allocate finalScore in NSNumber finalScore2
     
@@ -662,188 +868,6 @@
     
 
     
-    //It depends on the level so..
-    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    NSString *number_of_level = [prefs stringForKey:@"Level"];
-    
-
-    
-    if (number_of_level == @"1") { // LEVEL 1
-        
-        //Convert int to NSInteger, then convert int to string
-        maxBlink1_num = [[NSNumber alloc] initWithInt:maxBlink1];
-        string_aux_1 = [maxBlink1_num stringValue];
-        maxBlink2_num = [[NSNumber alloc] initWithInt:maxBlink2];
-        string_aux_2 = [maxBlink2_num stringValue];
-        maxBlink3_num = [[NSNumber alloc] initWithInt:maxBlink3];
-        string_aux_3 = [maxBlink3_num stringValue];
-
-        
-        NSLog(@"aux1: %@", string_aux_1);
-        NSLog(@"aux2: %@", string_aux_2);
-        NSLog(@"aux3: %@", string_aux_3);
-
-        if (component == 0) {
-           if ([ [data1 objectAtIndex:row] isEqualToString: (string_aux_1) ] ){
-        
-            score1 = 34;
-            //NSLog(@"score 1: ,%i",score1);
-           }
-           else
-               score1 = 0;
-        }
-
-        if (component == 1) {
-            if ([ [data2 objectAtIndex:row] isEqualToString: (string_aux_2) ] ){
-                
-                score2 = 35;
-                //NSLog(@"score 1: ,%i",score1);
-            }
-            else
-                score2 = 0;
-        }
-                
-        if (component == 2) {
-            if ([ [data3 objectAtIndex:row] isEqualToString: (string_aux_3) ] ){
-                
-                score3 = 36;
-                //NSLog(@"score 1: ,%i",score1);
-            }
-            else
-                score3 = 0;
-        }
-        
-        finalScore = score1 + score2 + score3 - penaltyPoints;
-        NSLog(@"finalScore: %i", finalScore);
-        if (finalScore == 99) finalScore = 100;
-        
-    } else if (number_of_level == @"2") { // LEVEL 2
-        
-        //Convert int to NSInteger, then convert int to string
-        maxBlink1_num = [[NSNumber alloc] initWithInt:maxBlink1];
-        string_aux_1 = [maxBlink1_num stringValue];
-        maxBlink2_num = [[NSNumber alloc] initWithInt:maxBlink2];
-        string_aux_2 = [maxBlink2_num stringValue];
-        maxBlink3_num = [[NSNumber alloc] initWithInt:maxBlink3];
-        string_aux_3 = [maxBlink3_num stringValue];
-        maxBlink4_num = [[NSNumber alloc] initWithInt:maxBlink4];
-        string_aux_4 = [maxBlink4_num stringValue];
-
-
-        
-        if (component == 0) {
-            if ([ [data1 objectAtIndex:row] isEqualToString: (string_aux_1) ] ){
-                
-                score1 = 25;
-                //NSLog(@"score 1: ,%i",score1);
-            }
-            else
-                score1 = 0;
-        }
-        
-        if (component == 1) {
-            if ([ [data2 objectAtIndex:row] isEqualToString: (string_aux_2) ] ){
-                
-                score2 = 25;
-                //NSLog(@"score 1: ,%i",score1);
-            }
-            else
-                score2 = 0;
-        }
-        
-        if (component == 2) {
-            if ([ [data3 objectAtIndex:row] isEqualToString: (string_aux_3) ] ){
-                
-                score3 = 25;
-                //NSLog(@"score 1: ,%i",score1);
-            }
-            else
-                score3 = 0;
-        }
-        if (component == 3) {
-            if ([ [data4 objectAtIndex:row] isEqualToString: (string_aux_4) ] ){
-                
-                score4 = 25;
-                //NSLog(@"score 1: ,%i",score1);
-            }
-            else
-                score4 = 0;
-        }
-        
-        finalScore = score1 + score2 + score3 + score4 - penaltyPoints;
-
-        
-
-    }
-    
-    // not working yet
-    else if (number_of_level == @"3") {
-                
-        //Convert int to NSInteger, then convert int to string
-        maxBlink1_num = [[NSNumber alloc] initWithInt:maxBlink1];
-        string_aux_1 = [maxBlink1_num stringValue];
-        maxBlink2_num = [[NSNumber alloc] initWithInt:maxBlink2];
-        string_aux_2 = [maxBlink2_num stringValue];
-        maxBlink3_num = [[NSNumber alloc] initWithInt:maxBlink3];
-        string_aux_3 = [maxBlink3_num stringValue];
-        maxBlink4_num = [[NSNumber alloc] initWithInt:maxBlink4];
-        string_aux_4 = [maxBlink4_num stringValue];
-        maxBlink5_num = [[NSNumber alloc] initWithInt:maxBlink5];
-        string_aux_5 = [maxBlink5_num stringValue];
-        
-        
-        if (component == 0) {
-            if ([ [data1 objectAtIndex:row] isEqualToString: (string_aux_1) ] ){
-                
-                score1 = 20;
-                //NSLog(@"score 1: ,%i",score1);
-            }
-            else
-                score1 = 0;
-        }
-        
-        if (component == 1) {
-            if ([ [data2 objectAtIndex:row] isEqualToString: (string_aux_2) ] ){
-                
-                score2 = 20;
-                //NSLog(@"score 1: ,%i",score1);
-            }
-            else
-                score2 = 0;
-        }
-        
-        if (component == 2) {
-            if ([ [data3 objectAtIndex:row] isEqualToString: (string_aux_3) ] ){
-                
-                score3 = 20;
-                //NSLog(@"score 1: ,%i",score1);
-            }
-            else
-                score3 = 0;
-        }
-        if (component == 3) {
-            if ([ [data4 objectAtIndex:row] isEqualToString: (string_aux_4) ] ){
-                
-                score4 = 20;
-                //NSLog(@"score 1: ,%i",score1);
-            }
-            else
-                score4 = 0;
-        }
-        if (component == 4) {
-            if ([ [data5 objectAtIndex:row] isEqualToString: (string_aux_5) ] ){
-                
-                score5 = 20;
-                //NSLog(@"score 1: ,%i",score1);
-            }
-            else
-                score5 = 0;
-        }
-        
-        finalScore = score1 + score2 + score3 + score4 + score5 - penaltyPoints;
-
-
-    }
     
 
         
