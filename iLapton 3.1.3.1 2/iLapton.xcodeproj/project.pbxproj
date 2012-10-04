@@ -1,0 +1,380 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15AE57C1161C90A10074E2BC /* iLaptonFifthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15AE57BF161C90A10074E2BC /* iLaptonFifthViewController.m */; };
+		15AE57C2161C90A10074E2BC /* iLaptonFifthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15AE57C0161C90A10074E2BC /* iLaptonFifthViewController.xib */; };
+		15FC800816192A49003A0F78 /* iLaptonFourthViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FC800616192A49003A0F78 /* iLaptonFourthViewController2.m */; };
+		15FC800916192A49003A0F78 /* iLaptonFourthViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15FC800716192A49003A0F78 /* iLaptonFourthViewController2.xib */; };
+		15FC800B16193EF5003A0F78 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FC800A16193EF5003A0F78 /* AVFoundation.framework */; };
+		406D2F1D1612FAA20072C7C0 /* iLaptonSecondViewController_ImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 406D2F1C1612FAA20072C7C0 /* iLaptonSecondViewController_ImagePicker.m */; };
+		406D2F581615BEC60072C7C0 /* iLaptonThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 406D2F571615BEC60072C7C0 /* iLaptonThirdViewController.m */; };
+		406D2F5B1615BEFC0072C7C0 /* iLapton_ThirdScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 406D2F5A1615BEFC0072C7C0 /* iLapton_ThirdScreenView.m */; };
+		40818F30161B6DD80066894B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40818F2F161B6DD80066894B /* AudioToolbox.framework */; };
+		40A12BC71612C67C0097ABC6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40A12BC61612C67C0097ABC6 /* UIKit.framework */; };
+		40A12BC91612C67C0097ABC6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40A12BC81612C67C0097ABC6 /* Foundation.framework */; };
+		40A12BCB1612C67C0097ABC6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40A12BCA1612C67C0097ABC6 /* CoreGraphics.framework */; };
+		40A12BD11612C67C0097ABC6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 40A12BCF1612C67C0097ABC6 /* InfoPlist.strings */; };
+		40A12BD31612C67C0097ABC6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A12BD21612C67C0097ABC6 /* main.m */; };
+		40A12BD71612C67C0097ABC6 /* iLaptonAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A12BD61612C67C0097ABC6 /* iLaptonAppDelegate.m */; };
+		40A12BDA1612C67C0097ABC6 /* iLaptonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A12BD91612C67C0097ABC6 /* iLaptonViewController.m */; };
+		40A12BE51612C7100097ABC6 /* iLapton_FirstScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A12BE41612C7100097ABC6 /* iLapton_FirstScreenView.m */; };
+		40A12BEA1612DED90097ABC6 /* iLapton_SecondScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A12BE91612DED90097ABC6 /* iLapton_SecondScreenView.m */; };
+		40A12BED1612DEED0097ABC6 /* iLaptonSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A12BEC1612DEED0097ABC6 /* iLaptonSecondViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		15AE57BE161C90A10074E2BC /* iLaptonFifthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iLaptonFifthViewController.h; sourceTree = "<group>"; };
+		15AE57BF161C90A10074E2BC /* iLaptonFifthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iLaptonFifthViewController.m; sourceTree = "<group>"; };
+		15AE57C0161C90A10074E2BC /* iLaptonFifthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iLaptonFifthViewController.xib; sourceTree = "<group>"; };
+		15FC800516192A49003A0F78 /* iLaptonFourthViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iLaptonFourthViewController2.h; sourceTree = "<group>"; };
+		15FC800616192A49003A0F78 /* iLaptonFourthViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iLaptonFourthViewController2.m; sourceTree = "<group>"; };
+		15FC800716192A49003A0F78 /* iLaptonFourthViewController2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iLaptonFourthViewController2.xib; sourceTree = "<group>"; };
+		15FC800A16193EF5003A0F78 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		406D2F1B1612FAA20072C7C0 /* iLaptonSecondViewController_ImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iLaptonSecondViewController_ImagePicker.h; sourceTree = "<group>"; };
+		406D2F1C1612FAA20072C7C0 /* iLaptonSecondViewController_ImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iLaptonSecondViewController_ImagePicker.m; sourceTree = "<group>"; };
+		406D2F561615BEC60072C7C0 /* iLaptonThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iLaptonThirdViewController.h; sourceTree = "<group>"; };
+		406D2F571615BEC60072C7C0 /* iLaptonThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iLaptonThirdViewController.m; sourceTree = "<group>"; };
+		406D2F591615BEFC0072C7C0 /* iLapton_ThirdScreenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iLapton_ThirdScreenView.h; sourceTree = "<group>"; };
+		406D2F5A1615BEFC0072C7C0 /* iLapton_ThirdScreenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iLapton_ThirdScreenView.m; sourceTree = "<group>"; };
+		40818F2F161B6DD80066894B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		40A12BC21612C67C0097ABC6 /* iLapton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLapton.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		40A12BC61612C67C0097ABC6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		40A12BC81612C67C0097ABC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		40A12BCA1612C67C0097ABC6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		40A12BCE1612C67C0097ABC6 /* iLapton-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iLapton-Info.plist"; sourceTree = "<group>"; };
+		40A12BD01612C67C0097ABC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		40A12BD21612C67C0097ABC6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		40A12BD41612C67C0097ABC6 /* iLapton-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iLapton-Prefix.pch"; sourceTree = "<group>"; };
+		40A12BD51612C67C0097ABC6 /* iLaptonAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iLaptonAppDelegate.h; sourceTree = "<group>"; };
+		40A12BD61612C67C0097ABC6 /* iLaptonAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iLaptonAppDelegate.m; sourceTree = "<group>"; };
+		40A12BD81612C67C0097ABC6 /* iLaptonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iLaptonViewController.h; sourceTree = "<group>"; };
+		40A12BD91612C67C0097ABC6 /* iLaptonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iLaptonViewController.m; sourceTree = "<group>"; };
+		40A12BE31612C7100097ABC6 /* iLapton_FirstScreenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iLapton_FirstScreenView.h; sourceTree = "<group>"; };
+		40A12BE41612C7100097ABC6 /* iLapton_FirstScreenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iLapton_FirstScreenView.m; sourceTree = "<group>"; };
+		40A12BE81612DED90097ABC6 /* iLapton_SecondScreenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iLapton_SecondScreenView.h; sourceTree = "<group>"; };
+		40A12BE91612DED90097ABC6 /* iLapton_SecondScreenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iLapton_SecondScreenView.m; sourceTree = "<group>"; };
+		40A12BEB1612DEED0097ABC6 /* iLaptonSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iLaptonSecondViewController.h; sourceTree = "<group>"; };
+		40A12BEC1612DEED0097ABC6 /* iLaptonSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iLaptonSecondViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		40A12BBF1612C67C0097ABC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40818F30161B6DD80066894B /* AudioToolbox.framework in Frameworks */,
+				15FC800B16193EF5003A0F78 /* AVFoundation.framework in Frameworks */,
+				40A12BC71612C67C0097ABC6 /* UIKit.framework in Frameworks */,
+				40A12BC91612C67C0097ABC6 /* Foundation.framework in Frameworks */,
+				40A12BCB1612C67C0097ABC6 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15AE57B8161C8EEA0074E2BC /* 5th screen -score */ = {
+			isa = PBXGroup;
+			children = (
+				15AE57BE161C90A10074E2BC /* iLaptonFifthViewController.h */,
+				15AE57BF161C90A10074E2BC /* iLaptonFifthViewController.m */,
+				15AE57C0161C90A10074E2BC /* iLaptonFifthViewController.xib */,
+			);
+			name = "5th screen -score";
+			sourceTree = "<group>";
+		};
+		15FC8004161929DC003A0F78 /* 4th screen -Game (2) */ = {
+			isa = PBXGroup;
+			children = (
+				15FC800516192A49003A0F78 /* iLaptonFourthViewController2.h */,
+				15FC800616192A49003A0F78 /* iLaptonFourthViewController2.m */,
+				15FC800716192A49003A0F78 /* iLaptonFourthViewController2.xib */,
+			);
+			name = "4th screen -Game (2)";
+			sourceTree = "<group>";
+		};
+		406D2F551615BE980072C7C0 /* 3rd screen - Levels */ = {
+			isa = PBXGroup;
+			children = (
+				406D2F561615BEC60072C7C0 /* iLaptonThirdViewController.h */,
+				406D2F571615BEC60072C7C0 /* iLaptonThirdViewController.m */,
+				406D2F591615BEFC0072C7C0 /* iLapton_ThirdScreenView.h */,
+				406D2F5A1615BEFC0072C7C0 /* iLapton_ThirdScreenView.m */,
+			);
+			name = "3rd screen - Levels";
+			sourceTree = "<group>";
+		};
+		40A12BB71612C67C0097ABC6 = {
+			isa = PBXGroup;
+			children = (
+				40A12BCC1612C67C0097ABC6 /* iLapton */,
+				40A12BC51612C67C0097ABC6 /* Frameworks */,
+				40A12BC31612C67C0097ABC6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		40A12BC31612C67C0097ABC6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40A12BC21612C67C0097ABC6 /* iLapton.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40A12BC51612C67C0097ABC6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40818F2F161B6DD80066894B /* AudioToolbox.framework */,
+				15FC800A16193EF5003A0F78 /* AVFoundation.framework */,
+				40A12BC61612C67C0097ABC6 /* UIKit.framework */,
+				40A12BC81612C67C0097ABC6 /* Foundation.framework */,
+				40A12BCA1612C67C0097ABC6 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		40A12BCC1612C67C0097ABC6 /* iLapton */ = {
+			isa = PBXGroup;
+			children = (
+				40A12BD51612C67C0097ABC6 /* iLaptonAppDelegate.h */,
+				40A12BD61612C67C0097ABC6 /* iLaptonAppDelegate.m */,
+				40A12BE61612DE950097ABC6 /* 1st screen - Player name */,
+				40A12BE71612DEB30097ABC6 /* 2nd screen - Player photo */,
+				406D2F551615BE980072C7C0 /* 3rd screen - Levels */,
+				15FC8004161929DC003A0F78 /* 4th screen -Game (2) */,
+				15AE57B8161C8EEA0074E2BC /* 5th screen -score */,
+				40A12BCD1612C67C0097ABC6 /* Supporting Files */,
+			);
+			path = iLapton;
+			sourceTree = "<group>";
+		};
+		40A12BCD1612C67C0097ABC6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				40A12BCE1612C67C0097ABC6 /* iLapton-Info.plist */,
+				40A12BCF1612C67C0097ABC6 /* InfoPlist.strings */,
+				40A12BD21612C67C0097ABC6 /* main.m */,
+				40A12BD41612C67C0097ABC6 /* iLapton-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		40A12BE61612DE950097ABC6 /* 1st screen - Player name */ = {
+			isa = PBXGroup;
+			children = (
+				40A12BD81612C67C0097ABC6 /* iLaptonViewController.h */,
+				40A12BD91612C67C0097ABC6 /* iLaptonViewController.m */,
+				40A12BE31612C7100097ABC6 /* iLapton_FirstScreenView.h */,
+				40A12BE41612C7100097ABC6 /* iLapton_FirstScreenView.m */,
+			);
+			name = "1st screen - Player name";
+			sourceTree = "<group>";
+		};
+		40A12BE71612DEB30097ABC6 /* 2nd screen - Player photo */ = {
+			isa = PBXGroup;
+			children = (
+				40A12BEB1612DEED0097ABC6 /* iLaptonSecondViewController.h */,
+				40A12BEC1612DEED0097ABC6 /* iLaptonSecondViewController.m */,
+				40A12BE81612DED90097ABC6 /* iLapton_SecondScreenView.h */,
+				40A12BE91612DED90097ABC6 /* iLapton_SecondScreenView.m */,
+				406D2F1B1612FAA20072C7C0 /* iLaptonSecondViewController_ImagePicker.h */,
+				406D2F1C1612FAA20072C7C0 /* iLaptonSecondViewController_ImagePicker.m */,
+			);
+			name = "2nd screen - Player photo";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		40A12BC11612C67C0097ABC6 /* iLapton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40A12BE01612C67C0097ABC6 /* Build configuration list for PBXNativeTarget "iLapton" */;
+			buildPhases = (
+				40A12BBE1612C67C0097ABC6 /* Sources */,
+				40A12BBF1612C67C0097ABC6 /* Frameworks */,
+				40A12BC01612C67C0097ABC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iLapton;
+			productName = iLapton;
+			productReference = 40A12BC21612C67C0097ABC6 /* iLapton.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		40A12BB91612C67C0097ABC6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = iLapton;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = Mat;
+			};
+			buildConfigurationList = 40A12BBC1612C67C0097ABC6 /* Build configuration list for PBXProject "iLapton" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 40A12BB71612C67C0097ABC6;
+			productRefGroup = 40A12BC31612C67C0097ABC6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				40A12BC11612C67C0097ABC6 /* iLapton */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		40A12BC01612C67C0097ABC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40A12BD11612C67C0097ABC6 /* InfoPlist.strings in Resources */,
+				15FC800916192A49003A0F78 /* iLaptonFourthViewController2.xib in Resources */,
+				15AE57C2161C90A10074E2BC /* iLaptonFifthViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		40A12BBE1612C67C0097ABC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40A12BD31612C67C0097ABC6 /* main.m in Sources */,
+				40A12BD71612C67C0097ABC6 /* iLaptonAppDelegate.m in Sources */,
+				40A12BDA1612C67C0097ABC6 /* iLaptonViewController.m in Sources */,
+				40A12BE51612C7100097ABC6 /* iLapton_FirstScreenView.m in Sources */,
+				40A12BEA1612DED90097ABC6 /* iLapton_SecondScreenView.m in Sources */,
+				40A12BED1612DEED0097ABC6 /* iLaptonSecondViewController.m in Sources */,
+				406D2F1D1612FAA20072C7C0 /* iLaptonSecondViewController_ImagePicker.m in Sources */,
+				406D2F581615BEC60072C7C0 /* iLaptonThirdViewController.m in Sources */,
+				406D2F5B1615BEFC0072C7C0 /* iLapton_ThirdScreenView.m in Sources */,
+				15FC800816192A49003A0F78 /* iLaptonFourthViewController2.m in Sources */,
+				15AE57C1161C90A10074E2BC /* iLaptonFifthViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		40A12BCF1612C67C0097ABC6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40A12BD01612C67C0097ABC6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		40A12BDE1612C67C0097ABC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		40A12BDF1612C67C0097ABC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		40A12BE11612C67C0097ABC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iLapton/iLapton-Prefix.pch";
+				INFOPLIST_FILE = "iLapton/iLapton-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		40A12BE21612C67C0097ABC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iLapton/iLapton-Prefix.pch";
+				INFOPLIST_FILE = "iLapton/iLapton-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		40A12BBC1612C67C0097ABC6 /* Build configuration list for PBXProject "iLapton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40A12BDE1612C67C0097ABC6 /* Debug */,
+				40A12BDF1612C67C0097ABC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40A12BE01612C67C0097ABC6 /* Build configuration list for PBXNativeTarget "iLapton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40A12BE11612C67C0097ABC6 /* Debug */,
+				40A12BE21612C67C0097ABC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 40A12BB91612C67C0097ABC6 /* Project object */;
+}
