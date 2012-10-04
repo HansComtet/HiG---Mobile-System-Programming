@@ -393,7 +393,7 @@
     [self start];
     
     if (isCalledTimes == 1) {
-        [self performSelector:@selector(finish) withObject:nil afterDelay:0.1];
+        [self performSelector:@selector(finish) withObject:nil afterDelay:0.05];
         
         if (counter >= (maxBlink1)) {
             if([blinkCicle isValid]) [blinkCicle invalidate];
@@ -405,7 +405,7 @@
     }
     
     else if (isCalledTimes == 2) {
-        [self performSelector:@selector(finish) withObject:nil afterDelay:0.1];
+        [self performSelector:@selector(finish) withObject:nil afterDelay:0.05];
         
         if (counter >= maxBlink2) {
             if([blinkCicle isValid]) [blinkCicle invalidate];
@@ -416,7 +416,7 @@
     }
     
     else if (isCalledTimes == 3) {
-        [self performSelector:@selector(finish) withObject:nil afterDelay:0.1];
+        [self performSelector:@selector(finish) withObject:nil afterDelay:0.05];
         
         if (counter >= maxBlink3) {
             if([blinkCicle isValid]) [blinkCicle invalidate];
@@ -435,7 +435,7 @@
     }
     
     else if (isCalledTimes == 4) {
-        [self performSelector:@selector(finish) withObject:nil afterDelay:0.1];
+        [self performSelector:@selector(finish) withObject:nil afterDelay:0.05];
         
         if (counter >= maxBlink4) {
             if([blinkCicle isValid]) [blinkCicle invalidate];
@@ -454,7 +454,7 @@
     }
     
     else if (isCalledTimes == 5) {
-        [self performSelector:@selector(finish) withObject:nil afterDelay:0.1];
+        [self performSelector:@selector(finish) withObject:nil afterDelay:0.05];
         
         if (counter >= maxBlink5) {
             if([blinkCicle isValid]) [blinkCicle invalidate];
