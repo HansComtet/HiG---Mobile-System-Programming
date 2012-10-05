@@ -15,6 +15,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
+    [NSThread sleepForTimeInterval:3.0];
+
+    
     // Creating first screen (content)
     self.viewController = [[iLaptonViewController alloc] init];
 

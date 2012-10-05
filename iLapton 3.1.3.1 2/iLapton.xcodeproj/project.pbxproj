@@ -16,6 +16,8 @@
 		406D2F581615BEC60072C7C0 /* iLaptonThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 406D2F571615BEC60072C7C0 /* iLaptonThirdViewController.m */; };
 		406D2F5B1615BEFC0072C7C0 /* iLapton_ThirdScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 406D2F5A1615BEFC0072C7C0 /* iLapton_ThirdScreenView.m */; };
 		40818F30161B6DD80066894B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40818F2F161B6DD80066894B /* AudioToolbox.framework */; };
+		40818F5A161F1A910066894B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 40818F59161F1A910066894B /* Default.png */; };
+		40818F5D161F1A990066894B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 40818F5C161F1A990066894B /* Default@2x.png */; };
 		40A12BC71612C67C0097ABC6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40A12BC61612C67C0097ABC6 /* UIKit.framework */; };
 		40A12BC91612C67C0097ABC6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40A12BC81612C67C0097ABC6 /* Foundation.framework */; };
 		40A12BCB1612C67C0097ABC6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40A12BCA1612C67C0097ABC6 /* CoreGraphics.framework */; };
@@ -43,6 +45,8 @@
 		406D2F591615BEFC0072C7C0 /* iLapton_ThirdScreenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iLapton_ThirdScreenView.h; sourceTree = "<group>"; };
 		406D2F5A1615BEFC0072C7C0 /* iLapton_ThirdScreenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iLapton_ThirdScreenView.m; sourceTree = "<group>"; };
 		40818F2F161B6DD80066894B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		40818F59161F1A910066894B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		40818F5C161F1A990066894B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		40A12BC21612C67C0097ABC6 /* iLapton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLapton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40A12BC61612C67C0097ABC6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		40A12BC81612C67C0097ABC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -113,6 +117,8 @@
 		40A12BB71612C67C0097ABC6 = {
 			isa = PBXGroup;
 			children = (
+				40818F5C161F1A990066894B /* Default@2x.png */,
+				40818F59161F1A910066894B /* Default.png */,
 				40A12BCC1612C67C0097ABC6 /* iLapton */,
 				40A12BC51612C67C0097ABC6 /* Frameworks */,
 				40A12BC31612C67C0097ABC6 /* Products */,
@@ -244,6 +250,8 @@
 				40A12BD11612C67C0097ABC6 /* InfoPlist.strings in Resources */,
 				15FC800916192A49003A0F78 /* iLaptonFourthViewController2.xib in Resources */,
 				15AE57C2161C90A10074E2BC /* iLaptonFifthViewController.xib in Resources */,
+				40818F5A161F1A910066894B /* Default.png in Resources */,
+				40818F5D161F1A990066894B /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
