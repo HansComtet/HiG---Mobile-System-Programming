@@ -504,7 +504,7 @@
         [lbl_info setText:@"Prepare to fight!"];
     } else {
         
-        [lbl_info setText:@"Preparate para jugar!"];
+        [lbl_info setText:@"Prepárate para jugar!"];
     }
     [self.view addSubview:lbl_info];
 
@@ -647,7 +647,7 @@
         [lbl_info setText:@"Prepare to fight!"];
     } else {
         
-        [lbl_info setText:@"Preparado para luchar!"];
+        [lbl_info setText:@"Prepárate para luchar!"];
     }    offButton.hidden = YES;
     onButton.hidden = YES; //temp
     picker.hidden = YES;

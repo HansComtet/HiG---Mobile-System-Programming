@@ -74,7 +74,9 @@
         [segmentedControl addTarget:parent
                              action:@selector(langChanged:)
                    forControlEvents:UIControlEventValueChanged];
+        segmentedControl.selectedSegmentIndex = 0;
         [self addSubview:segmentedControl];
+        
         
         // rotate labels in seg control (lang)
         NSArray *arr = [segmentedControl subviews];
