@@ -25,11 +25,8 @@
 // Code to import user_nick (future)
 @synthesize user_nick;
 
-// Scores
-
-
 // Light
-@synthesize onButton, offButton, onView, offView, check;
+@synthesize check;
 
 // Timer
 @synthesize timer;
@@ -38,8 +35,8 @@
 -(IBAction)start{
     
     NSLog(@"ON counter: %i | isCalledTimes: %i", counter, isCalledTimes);
-    
     AVCaptureDevice *flashLight = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    
     if([flashLight isTorchAvailable] && [flashLight isTorchModeSupported:AVCaptureTorchModeOn ])
     {
         BOOL success = [flashLight lockForConfiguration:nil];
@@ -87,7 +84,7 @@
     return self;
 }
 
-// method for start sequency of blinking LED in different frequencies
+// Method for start sequency of blinking LED in different frequencies
 -(void) blinkCycleMethod {
     
     
@@ -127,6 +124,7 @@
 
 }
 
+// The method starts the sequency of lights depending on the level.
 -(void) letsStartBlinkingLED {
     
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
@@ -142,11 +140,6 @@
     NSLog(@"maxBlink4: %i", maxBlink4);
     NSLog(@"maxBlink5: %i", maxBlink5);
 
-
-
-    
-    //HAY QUE CREAR EL NUMERO DE CICLOS DEPENDIENDO DEL NIVEL.
-    
     if (number_of_level == @"1") {
         
         freq = 0.8;
@@ -242,10 +235,9 @@
     lbl_sequency_nr.hidden = YES;
     lbl_info.hidden = NO;
 
-
-
 }
 
+// Button Check
 - (IBAction)checkAction{
     
     NSInteger column1;
@@ -254,18 +246,9 @@
     NSInteger column4;
     NSInteger column5;
 
-
-    
-
-
-    
-    
-    
     //It depends on the level so..
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSString *number_of_level = [prefs stringForKey:@"Level"];
-    
-    
     
     if (number_of_level == @"1") { // LEVEL 1
         
@@ -297,6 +280,7 @@
 
         finalScore = score1 + score2 + score3 - penaltyPoints;
         NSLog(@"finalScore: %i", finalScore);
+        
         if (finalScore == 99) finalScore = 100;
         
     } else if (number_of_level == @"2") { // LEVEL 2
@@ -333,14 +317,12 @@
         else
             score4 = 0;
         
-        
         finalScore = score1 + score2 + score3 + score4 - penaltyPoints;
         NSLog(@"finalScore: %i", finalScore);
 
         
     }
     
-    // not working yet
     else if (number_of_level == @"3") {
         
         column1 = [picker selectedRowInComponent:0] + 1;
@@ -387,18 +369,8 @@
 
         
     }
-
-    
-    
-    
-    
-    
-    
-    
     
     NSLog(@"Final score: %i",finalScore);
-    
-    
     
     // Allocate finalScore in NSNumber finalScore2
     
@@ -407,7 +379,6 @@
     // Store finalScore in NSUserDefaults.
     NSUserDefaults *final_score = [NSUserDefaults standardUserDefaults];
     [final_score setObject:self->finalScore_num forKey:@"FINALSCORE"];
-    
     
     fifthScreenView = [[iLaptonFifthViewController alloc] init];
     [self.navigationController pushViewController:fifthScreenView animated:YES];
@@ -458,7 +429,6 @@
 
     }
     
-    
     data1 = [[NSMutableArray alloc]initWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9", nil];
     data2 = [[NSMutableArray alloc]initWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9", nil];
     data3 = [[NSMutableArray alloc]initWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9", nil];
@@ -467,7 +437,7 @@
     
     penaltyPoints = 0;
     
-    // label - seq info
+    // Label - seq info
     lbl_sequency = [[UILabel alloc] initWithFrame:CGRectMake(15, 30, 300, 300) ];
     lbl_sequency.textAlignment =  UITextAlignmentCenter;
     lbl_sequency.textColor = [UIColor whiteColor];
@@ -482,8 +452,6 @@
         [lbl_sequency setText:@"Sequencia nr."];
     }
     
-
-
     // label - seq number
     lbl_sequency_nr = [[UILabel alloc] initWithFrame:CGRectMake(15, 80, 300, 300) ];
     lbl_sequency_nr.textAlignment =  UITextAlignmentCenter;
@@ -506,15 +474,15 @@
         
         [lbl_info setText:@"Prepárate para jugar!"];
     }
+    
     [self.view addSubview:lbl_info];
 
     
-    // progress bar
+    // Progress bar
     progressBar = [[UIProgressView alloc] initWithFrame:CGRectMake(60, 200, 200, 40)];
     [progressBar setProgressViewStyle:UIProgressViewStyleBar];
     [self.view addSubview: progressBar];
 
-    
     // Again button
     btn_Again = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [btn_Again addTarget:self action:@selector(btnAgain:) forControlEvents:UIControlEventTouchUpInside];
@@ -527,17 +495,12 @@
     btn_Again.frame = CGRectMake(40.0, 330.0, 120.0, 60.0);
     [btn_Again setTag:1];
     [self.view addSubview:btn_Again];
-
-    
     [self btnAgain:nil];
-    
-    
-
     [super viewDidLoad];
-    
     
 }
 
+// This is the method that start/stop the light.
 - (void)blinkLED {
     
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
@@ -622,10 +585,9 @@
             counter = 0;
             
         }
+        
     }
-    
-    //NSLog(@"counter: %i | isCalledTimes: %i", counter, isCalledTimes);
-    
+        
     counter++;
     
 }
@@ -633,23 +595,29 @@
 -(void)btnAgain:(id)sender {
     
     [self.navigationItem setHidesBackButton:YES animated:YES];
-
-    
     NSUserDefaults *lang = [NSUserDefaults standardUserDefaults];
     int language = [lang integerForKey:@"language"];
     
     if([blinkCicle isValid]) [blinkCicle invalidate];
 
+    // Some penalty and play it again
     
-    // some penalty and play it again
-    
-    if (language == 1) {
+    if (language == 1)
+    {
         [lbl_info setText:@"Prepare to fight!"];
+        
     } else {
         
+<<<<<<< HEAD
         [lbl_info setText:@"Prepárate para luchar!"];
     }    offButton.hidden = YES;
     onButton.hidden = YES; //temp
+=======
+        [lbl_info setText:@"Preparado para luchar!"];
+        
+    }
+    
+>>>>>>> clean coments
     picker.hidden = YES;
     btn_Again.hidden = YES;
     check.hidden = YES;
@@ -657,11 +625,10 @@
     [progressBar setProgress:0.0];
     lbl_sequency.hidden = YES;
     lbl_sequency_nr.hidden = YES;
+    
     [self performSelectorOnMainThread:@selector(makeMyProgressBarMoving) withObject:nil waitUntilDone:NO];
     [self performSelector:@selector(letsStartBlinkingLED) withObject:nil afterDelay:3];
     
-    
-   
     UIButton *button = (UIButton*)sender;
     if (button.tag != 1) { // level 1
         // generate new only if not Again button was pressed (we go here from previous screen)
@@ -671,12 +638,12 @@
         maxBlink4 = arc4random() % 9 + 1; // 1 to 10
         maxBlink5 = arc4random() % 9 + 1; // 1 to 10
     }
+    
     else { // we pressed again button - penalty
         penaltyPoints += 10;
     }
     
 }
-
 
 - (void)makeMyProgressBarMoving {
     
@@ -727,7 +694,7 @@
 
 
 
-// returns the number of 'columns' to display.
+// Returns the number of 'columns' to display.
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
@@ -745,7 +712,7 @@
 }
 
 
-// returns the # of rows in each component..
+// Returns the # of rows in each component..
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     
     if (component == 0){
@@ -776,7 +743,7 @@
     
 }
 
-// what is displayed in pickerview
+// What is displayed in pickerview
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     
     if (component == 0){
@@ -805,19 +772,5 @@
     
     }
 }
-    
-
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    
-    
-
-    
-    
-
-        
-    
-}
-
-
 
 @end
