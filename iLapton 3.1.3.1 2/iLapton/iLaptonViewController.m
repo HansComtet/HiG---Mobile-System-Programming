@@ -19,6 +19,7 @@
 @synthesize textField_YourName;
 @synthesize btn_Next, btn_Skip, segmentedControl;
 
+#pragma mark - View controller methods
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -50,6 +51,7 @@
 }
 
 
+#pragma mark - Main functionality
 
 -(void)btnNext:(id)sender {
     
