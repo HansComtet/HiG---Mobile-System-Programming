@@ -54,8 +54,8 @@
 @property (nonatomic, retain) UILabel *lbl_info;
 
 // label - counting sequencies
-@property (nonatomic, retain) UILabel *lbl_sequency;
-@property (nonatomic, retain) UILabel *lbl_sequency_nr;
+@property (nonatomic, retain) UILabel *lbl_sequence;
+@property (nonatomic, retain) UILabel *lbl_sequence_nr;
 
 // progress bar before playing
 @property (nonatomic, strong) UIProgressView *progressBar;

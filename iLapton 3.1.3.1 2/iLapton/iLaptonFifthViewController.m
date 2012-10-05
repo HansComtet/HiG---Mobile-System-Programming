@@ -67,14 +67,16 @@
     
     
     // New Game - Same User Info
+    btn_NewGameSameName.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
     btn_NewGameSameName = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [btn_NewGameSameName addTarget:self action:@selector(btnNewGameSameName:) forControlEvents:UIControlEventTouchUpInside];
     
+    
     if(language == 1)
     {
-    [btn_NewGameSameName setTitle:@"Start new game (same user info)" forState:UIControlStateNormal];
+    [btn_NewGameSameName setTitle:@"Restart with same user" forState:UIControlStateNormal];
     }else{
-    [btn_NewGameSameName setTitle:@"Empieza nuevo juego (mismo usuario)" forState:UIControlStateNormal];
+    [btn_NewGameSameName setTitle:@"Reiniciar con distinto usuario" forState:UIControlStateNormal];
     }
     
     btn_NewGameSameName.frame = CGRectMake(35.0, 250.0, 120.0, 60.0);
@@ -82,15 +84,16 @@
     [self.view addSubview:btn_NewGameSameName];
 
     // New Game - New User Info
+    btn_NewGameDiffName.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
     btn_NewGameDiffName = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [btn_NewGameDiffName addTarget:self action:@selector(btnNewGameNewName:) forControlEvents:UIControlEventTouchUpInside];
     if(language == 1)
-    {
-    [btn_NewGameDiffName setTitle:@"Start new game (new user info)" forState:UIControlStateNormal];
+    {  
+    [btn_NewGameDiffName setTitle:@"Restart with new user" forState:UIControlStateNormal];
     }
     else
     {
-    [btn_NewGameDiffName setTitle:@"Empezar nuevo juego (nuevo usuario)" forState:UIControlStateNormal];
+    [btn_NewGameDiffName setTitle:@"Reiniciar con el mismo usuario" forState:UIControlStateNormal];
     }
     btn_NewGameDiffName.frame = CGRectMake(165.0, 250.0, 120.0, 60.0);
     btn_NewGameDiffName.titleLabel.lineBreakMode = UILineBreakModeWordWrap;

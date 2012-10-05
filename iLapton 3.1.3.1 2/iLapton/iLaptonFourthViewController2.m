@@ -16,7 +16,7 @@
     
 @synthesize data1,data2,data3,data4,data5;
 @synthesize counter2, score;
-@synthesize picker, lbl_info, lbl_sequency, lbl_sequency_nr, progressBar;
+@synthesize picker, lbl_info, lbl_sequence, lbl_sequence_nr, progressBar;
 @synthesize btn_Again;
 
 // Change Screen
@@ -81,31 +81,31 @@
     return self;
 }
 
-// Method for start sequency of blinking LED in different frequencies depending on the sequency (isCalledTimes)
+// Method for start sequence of blinking LED in different frequencies depending on the sequence (isCalledTimes)
 -(void) blinkCycleMethod {
 
     if (isCalledTimes == 1) {
-        [lbl_sequency_nr setText:@"1"];
+        [lbl_sequence_nr setText:@"1"];
         blinkCicle = [NSTimer scheduledTimerWithTimeInterval:freq target:self selector:@selector(blinkLED) userInfo:nil repeats:YES];
     }
     
     else if (isCalledTimes == 2) {
-        [lbl_sequency_nr setText:@"2"];
+        [lbl_sequence_nr setText:@"2"];
         blinkCicle = [NSTimer scheduledTimerWithTimeInterval:freq target:self selector:@selector(blinkLED) userInfo:nil repeats:YES];
     }
     
     else if (isCalledTimes == 3) {
-        [lbl_sequency_nr setText:@"3"];
+        [lbl_sequence_nr setText:@"3"];
         blinkCicle = [NSTimer scheduledTimerWithTimeInterval:freq target:self selector:@selector(blinkLED) userInfo:nil repeats:YES];
     }    
 
     else if (isCalledTimes == 4) {
-        [lbl_sequency_nr setText:@"4"];
+        [lbl_sequence_nr setText:@"4"];
         blinkCicle = [NSTimer scheduledTimerWithTimeInterval:freq target:self selector:@selector(blinkLED) userInfo:nil repeats:YES];
     }
     
     else if (isCalledTimes == 5) {
-        [lbl_sequency_nr setText:@"5"];
+        [lbl_sequence_nr setText:@"5"];
         blinkCicle = [NSTimer scheduledTimerWithTimeInterval:freq target:self selector:@selector(blinkLED) userInfo:nil repeats:YES];
     }
     
@@ -120,7 +120,7 @@
 
 }
 
-// The method starts the sequency of lights depending on the level.
+// The method starts the sequence of lights depending on the level.
 -(void) letsStartBlinkingLED {
     
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
@@ -228,8 +228,8 @@
     
     btn_Again.hidden = NO;
     check.hidden = NO;
-    lbl_sequency.hidden = YES;
-    lbl_sequency_nr.hidden = YES;
+    lbl_sequence.hidden = YES;
+    lbl_sequence_nr.hidden = YES;
     lbl_info.hidden = NO;
 
 }
@@ -435,28 +435,28 @@
     penaltyPoints = 0;
     
     // Label - seq info
-    lbl_sequency = [[UILabel alloc] initWithFrame:CGRectMake(15, 30, 300, 300) ];
-    lbl_sequency.textAlignment =  UITextAlignmentCenter;
-    lbl_sequency.textColor = [UIColor whiteColor];
-    lbl_sequency.backgroundColor = [UIColor clearColor];
-    lbl_sequency.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(24.0)];
+    lbl_sequence = [[UILabel alloc] initWithFrame:CGRectMake(15, 30, 300, 300) ];
+    lbl_sequence.textAlignment =  UITextAlignmentCenter;
+    lbl_sequence.textColor = [UIColor whiteColor];
+    lbl_sequence.backgroundColor = [UIColor clearColor];
+    lbl_sequence.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(24.0)];
     
     if (language == 1) {
-        [self.view addSubview:lbl_sequency];
-        [lbl_sequency setText:@"Sequency nr."];
+        [self.view addSubview:lbl_sequence];
+        [lbl_sequence setText:@"sequence nr."];
     } else {
-        [self.view addSubview:lbl_sequency];
-        [lbl_sequency setText:@"Sequencia nr."];
+        [self.view addSubview:lbl_sequence];
+        [lbl_sequence setText:@"Sequencia nr."];
     }
     
     // label - seq number
-    lbl_sequency_nr = [[UILabel alloc] initWithFrame:CGRectMake(15, 80, 300, 300) ];
-    lbl_sequency_nr.textAlignment =  UITextAlignmentCenter;
-    lbl_sequency_nr.textColor = [UIColor whiteColor];
-    lbl_sequency_nr.backgroundColor = [UIColor clearColor];
-    lbl_sequency_nr.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(60.0)];
-    [self.view addSubview:lbl_sequency_nr];
-    [lbl_sequency_nr setText:@"1"];
+    lbl_sequence_nr = [[UILabel alloc] initWithFrame:CGRectMake(15, 80, 300, 300) ];
+    lbl_sequence_nr.textAlignment =  UITextAlignmentCenter;
+    lbl_sequence_nr.textColor = [UIColor whiteColor];
+    lbl_sequence_nr.backgroundColor = [UIColor clearColor];
+    lbl_sequence_nr.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(60.0)];
+    [self.view addSubview:lbl_sequence_nr];
+    [lbl_sequence_nr setText:@"1"];
 
     // label - countown info
     lbl_info = [[UILabel alloc] initWithFrame:CGRectMake(10, 50, 300, 40) ];
@@ -615,8 +615,8 @@
     check.hidden = YES;
     progressBar.hidden = NO;
     [progressBar setProgress:0.0];
-    lbl_sequency.hidden = YES;
-    lbl_sequency_nr.hidden = YES;
+    lbl_sequence.hidden = YES;
+    lbl_sequence_nr.hidden = YES;
     
     [self performSelectorOnMainThread:@selector(makeMyProgressBarMoving) withObject:nil waitUntilDone:NO];
     [self performSelector:@selector(letsStartBlinkingLED) withObject:nil afterDelay:3];
@@ -644,8 +644,8 @@
         progressBar.progress = actual + 0.02;
         [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(makeMyProgressBarMoving) userInfo:nil repeats:NO];
     } else {
-        lbl_sequency.hidden = NO;
-        lbl_sequency_nr.hidden = NO;
+        lbl_sequence.hidden = NO;
+        lbl_sequence_nr.hidden = NO;
         check.hidden = YES;
         progressBar.hidden = YES;
         lbl_info.hidden = YES;
