@@ -8,10 +8,6 @@
 
 #import "iLaptonSecondViewController.h"
 
-@interface iLaptonSecondViewController ()
-
-@end
-
 @implementation iLaptonSecondViewController
 
 
@@ -26,6 +22,7 @@
     
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        
         // Custom initialization
         if (language == 1) {
             [self setTitle:@"Your avatar"];

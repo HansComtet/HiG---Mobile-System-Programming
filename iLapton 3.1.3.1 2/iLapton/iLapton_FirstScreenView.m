@@ -19,15 +19,6 @@
     if (self) {
         
         [self setBackgroundColor:[UIColor scrollViewTexturedBackgroundColor]];
-
-        /*
-        lbl_YourName = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, self.frame.size.width, 40)];
-        [lbl_YourName setTextAlignment:UITextAlignmentCenter];
-        [lbl_YourName setTextColor:[UIColor blackColor]];
-        [self addSubview:lbl_YourName];
-        
-        [lbl_YourName setText:@"Welcome to iLapton"];
-        */
          
         // Textfield for name
         textField_YourName = [[UITextField alloc] initWithFrame:CGRectMake(35, 40, 200, 40)];
@@ -60,9 +51,7 @@
         [btn_Next setTitle:@"Next" forState:UIControlStateNormal];
         btn_Next.frame = CGRectMake(140.0, 120.0, 160.0, 60.0);
         [self addSubview:btn_Next];
-        
 
-        
         
         // lang seg control
         NSArray *itemArray = [NSArray arrayWithObjects: @"EN", @"ES", nil];
@@ -71,9 +60,7 @@
         segmentedControl.segmentedControlStyle = UISegmentedControlStylePlain;
         segmentedControl.selectedSegmentIndex = 1;
         segmentedControl.transform = CGAffineTransformMakeRotation(M_PI / 2.0);
-        [segmentedControl addTarget:parent
-                             action:@selector(langChanged:)
-                   forControlEvents:UIControlEventValueChanged];
+        [segmentedControl addTarget:parent action:@selector(langChanged:) forControlEvents:UIControlEventValueChanged];
         segmentedControl.selectedSegmentIndex = 0;
         [self addSubview:segmentedControl];
         
@@ -81,29 +68,20 @@
         // rotate labels in seg control (lang)
         NSArray *arr = [segmentedControl subviews];
         for (int i = 0; i < [arr count]; i++) {
+            
             UIView *v = (UIView*) [arr objectAtIndex:i];
             NSArray *subarr = [v subviews];
             for (int j = 0; j < [subarr count]; j++) {
+                
                 if ([[subarr objectAtIndex:j] isKindOfClass:[UILabel class]]) {
                     UILabel *l = (UILabel*) [subarr objectAtIndex:j];
                     l.transform = CGAffineTransformMakeRotation(- M_PI / 2.0); //do the reverse of what Ben did
                 }
+                
             }
         }
-
-        
-        
     }
     return self;
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end

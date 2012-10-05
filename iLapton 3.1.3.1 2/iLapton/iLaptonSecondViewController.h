@@ -12,9 +12,8 @@
 
 @interface iLaptonSecondViewController : UIViewController
 
-// create new screens in order to be allowed to change the screen. AHAHAHA
+// Create new screens in order to be allowed to change the screen. AHAHAHA
 @property (nonatomic, retain) iLapton_SecondScreenView *secondScreenView;
-
 @property (nonatomic, retain) iLaptonThirdViewController *thirdViewController;
 
 

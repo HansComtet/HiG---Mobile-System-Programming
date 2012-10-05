@@ -20,13 +20,13 @@
     
     self = [super initWithFrame:frame];
     if (self) {
+        
         // Initialization code
-        
         [self setBackgroundColor:[UIColor scrollViewTexturedBackgroundColor]];
-        
         
         // image - player photo
         user_photo = [[UIImageView alloc] initWithFrame:CGRectMake(18, 30, 80, 60)];
+        
         //obtaining saving path
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -36,7 +36,6 @@
         user_photo.image = img;
         float degrees = 90; //the value in degrees
         user_photo.transform = CGAffineTransformMakeRotation(degrees * M_PI/180);
-        
         
         [self addSubview:user_photo];
 
@@ -49,9 +48,13 @@
         [self addSubview:lbl_infoPlayer];
         
         if (language == 1) {
+            
             lbl_infoPlayer.text = @"Your name:";
+            
         } else {
+            
             lbl_infoPlayer.text = @"Su nombre:";
+            
         }
         
         
@@ -83,9 +86,13 @@
         level2_button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         [level2_button addTarget:parent action:@selector(goToLevel:) forControlEvents:UIControlEventTouchUpInside];
         if (language == 1) {
+            
             [level2_button setTitle:@"Level 2" forState:UIControlStateNormal];
+            
         } else {
+            
             [level2_button setTitle:@"Nivel 2" forState:UIControlStateNormal];
+            
         }
         [level2_button setTag:2];
         level2_button.frame = CGRectMake(115, 145, 90,250);
@@ -95,35 +102,28 @@
         level3_button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         [level3_button addTarget:parent action:@selector(goToLevel:) forControlEvents:UIControlEventTouchUpInside];
         if (language == 1) {
+            
             [level3_button setTitle:@"Level 3" forState:UIControlStateNormal];
+            
         } else {
+            
             [level3_button setTitle:@"Nivel 3" forState:UIControlStateNormal];
+            
         }
+        
         [level3_button setTag:3];
         level3_button.frame = CGRectMake(210, 145, 90,250);
         [self addSubview:level3_button];
-        
-                       
+                               
         NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
         NSString *playerName_string = [prefs stringForKey:@"PlayerName"];
         
         user_nick.text = [NSString stringWithFormat: @"%@", playerName_string];
-
         
-        
-        
-
     }
+    
     return self;
+    
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end

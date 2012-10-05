@@ -19,21 +19,19 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    
     if (self) {
+        
         // Custom initialization
         
         self.delegate = self;
         
         [self.view setFrame:CGRectMake(10, 100, 300, 350)];
         
-        //self.title = @"Camera picker";
-        
-
-
-        
-        
     }
+    
     return self;
+    
 }
 
 - (void) imagePickerController:(UIImagePickerController *)picker
@@ -54,36 +52,12 @@
     // Write out the data.
     [imageData writeToFile:fullPathToFile atomically:NO];
     
-    
-    
-    /*
-    
-    //obtaining saving path
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *imagePath = [documentsDirectory stringByAppendingPathComponent:@"latest_photo.png"];
-    
-    //extracting image from the picker and saving it
-    NSString *mediaType = [info objectForKey:UIImagePickerControllerMediaType];
-    if ([mediaType isEqualToString:@"public.image"]){
-        UIImage *editedImage = [info objectForKey:UIImagePickerControllerEditedImage];
-        NSData *webData = UIImagePNGRepresentation(editedImage);
-        [webData writeToFile:imagePath atomically:YES];
-    }
-     
-     */
-    
      NSLog(@"photo shooted");
      
-    
     thirdViewController = [[iLaptonThirdViewController alloc] init];
     [secondViewController.navigationController pushViewController:thirdViewController animated:YES];
     
-
-
 }
-
-
 
 - (void)viewDidLoad
 {

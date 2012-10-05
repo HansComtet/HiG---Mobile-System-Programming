@@ -53,7 +53,6 @@
 -(IBAction)finish{
     
     NSLog(@"OFF");
-    
     AVCaptureDevice *flashLight = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     if([flashLight isTorchAvailable] && [flashLight isTorchModeSupported:AVCaptureTorchModeOn ])
     {
@@ -77,17 +76,14 @@
         // Custom initialization
         blinkCicle = [[NSTimer alloc] init];
         
-
-        
     }
     
     return self;
 }
 
-// Method for start sequency of blinking LED in different frequencies
+// Method for start sequency of blinking LED in different frequencies depending on the sequency (isCalledTimes)
 -(void) blinkCycleMethod {
-    
-    
+
     if (isCalledTimes == 1) {
         [lbl_sequency_nr setText:@"1"];
         blinkCicle = [NSTimer scheduledTimerWithTimeInterval:freq target:self selector:@selector(blinkLED) userInfo:nil repeats:YES];
@@ -132,7 +128,6 @@
     
     // This are the values that changes with the level
     counter = 1;
-
 
     NSLog(@"maxBlink1: %i", maxBlink1);
     NSLog(@"maxBlink2: %i", maxBlink2);
@@ -209,24 +204,26 @@
 
 }
 
-
+// When the sequence ends, it shows the buttons that let the player check 
 -(void) letsPickingNumbers {
     
     [self.navigationItem setHidesBackButton:NO animated:YES];
-
     
     NSUserDefaults *lang = [NSUserDefaults standardUserDefaults];
     int language = [lang integerForKey:@"language"];
     
     [picker reloadAllComponents];
-    
     progressBar.hidden = YES;
     picker.hidden = NO;
     
     if (language == 1) {
+        
         [lbl_info setText:@"Have you counted it?"];
+        
     } else {
+        
         [lbl_info setText:@"Las ha contado?"];
+        
     }
     
     btn_Again.hidden = NO;
@@ -258,12 +255,12 @@
 
         
         if (column1 == maxBlink1){
+            
             score1 = 33;
         }
         else
             score1 = 0;
-        
-        
+    
         if (column2 == maxBlink2){
             score2 = 33;
         }
@@ -608,16 +605,11 @@
         
     } else {
         
-<<<<<<< HEAD
         [lbl_info setText:@"Prepárate para luchar!"];
-    }    offButton.hidden = YES;
-    onButton.hidden = YES; //temp
-=======
-        [lbl_info setText:@"Preparado para luchar!"];
         
     }
     
->>>>>>> clean coments
+
     picker.hidden = YES;
     btn_Again.hidden = YES;
     check.hidden = YES;

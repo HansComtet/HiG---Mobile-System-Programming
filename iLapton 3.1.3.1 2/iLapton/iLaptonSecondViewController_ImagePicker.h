@@ -13,8 +13,6 @@
 
 
 @property (nonatomic, retain) UIViewController *secondViewController;
-
-
 @property (nonatomic, retain) iLaptonThirdViewController *thirdViewController;
 
 

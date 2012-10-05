@@ -18,5 +18,4 @@
 
 - (id)initWithFrame:(CGRect)frame:(UIViewController *)parent;
 
- 
 @end

@@ -15,20 +15,12 @@
     IBOutlet UILabel *lbl_finalLabel2;
     IBOutlet UILabel *lbl_finalLabel1;
     
-    
 }
-
 
 @property (nonatomic, retain) UILabel *lbl_finalLabel1;
 @property (nonatomic, retain) UILabel *lbl_finalLabel2;
-
-
 @property (nonatomic, retain) UILabel *lbl_topScoreTitle;
-
 @property (nonatomic, retain) UIButton *btn_NewGameSameName;
 @property (nonatomic, retain) UIButton *btn_NewGameDiffName;
-
-
-
 
 @end

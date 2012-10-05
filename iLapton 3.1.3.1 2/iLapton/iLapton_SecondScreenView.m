@@ -21,8 +21,8 @@
     
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
         
+        // Initialization code
         [self setBackgroundColor:[UIColor blackColor]];
         
         // label - info
@@ -59,42 +59,33 @@
             lbl_welcomePlayer.text = [NSString stringWithFormat: @"Hola, %@", playerName_string];
         }
         
-        
-        // camera controller
+        // Camera controller
         imagePicker = [[iLaptonSecondViewController_ImagePicker alloc] init];
         imagePicker.secondViewController = parent;
         
         // Set source to the camera
         if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+            
             imagePicker.sourceType =  UIImagePickerControllerSourceTypeCamera;
             // use front camera
             imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
             // flip mirrored image
             imagePicker.cameraViewTransform = CGAffineTransformScale(imagePicker.cameraViewTransform, -1, 1);
 
-
-        }
-        else {
+        } else {
+            
             imagePicker.sourceType =  UIImagePickerControllerSourceTypeSavedPhotosAlbum;
             
         }
-        
         
         // Show image picker       
         [self addSubview:imagePicker.view];
         
         
     }
+    
     return self;
+    
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end

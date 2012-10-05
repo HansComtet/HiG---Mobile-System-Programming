@@ -24,9 +24,4 @@
 @property (nonatomic, retain) UIButton *level1;
 
 
-
-
-
-
-
 @end

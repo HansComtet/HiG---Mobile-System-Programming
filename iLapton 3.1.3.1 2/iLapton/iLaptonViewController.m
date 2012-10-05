@@ -8,11 +8,6 @@
 
 #import "iLaptonViewController.h"
 
-@interface iLaptonViewController ()
-
-@end
-
-
 @implementation iLaptonViewController
 
 @synthesize firstScreenView, secondViewController, thirdViewController;
@@ -62,6 +57,7 @@
     
     
     if ([self.textField_YourName.text isEqualToString:@""]) {
+        
         if (language == 1) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Empty name"
                                                             message: @"You have to type your nickname!"
@@ -79,14 +75,11 @@
             [alert show];
         }
         
-        
-        
-
     }
     
     else {
     
-        // saving player name to NSUserDefault
+        // Saving player name to NSUserDefault
         NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
         [prefs setObject:self.textField_YourName.text forKey:@"PlayerName"];
         
@@ -98,12 +91,11 @@
 
 -(void)btnSkip:(id)sender {
     
-    
     // saving player name to NSUserDefault
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     [prefs setObject:@"iGuy" forKey:@"PlayerName"];
     
-    //i don´t understand this part (saul). i think it´s only to go to the next screen
+    // Change the screen
     thirdViewController = [[iLaptonThirdViewController alloc] init];
     [self.navigationController pushViewController:thirdViewController animated:YES];
     
@@ -114,6 +106,7 @@
 
    // Get language variable value
     NSUserDefaults *lang = [NSUserDefaults standardUserDefaults];
+    
     int language = [lang integerForKey:@"language"];
     // Change the value depending of the last value
     // If the language is english, change into spanish. Else, change to english.
@@ -127,6 +120,7 @@
         
         
     } else {
+        
         language = 1;
         [lang setInteger:language forKey:@"language"];
         [self setTitle:@"The iLaptop game"];
@@ -137,9 +131,6 @@
        
     }
     
-    
-
-
 }
 
 

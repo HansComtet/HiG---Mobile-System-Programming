@@ -104,7 +104,7 @@
 -(void)btnNewGameSameName:(id)sender {
     
    
-    //i don´t understand this part (saul). i think it´s only to go to the next screen
+    //Change Screen
     iLaptonThirdViewController *thirdViewController = [[iLaptonThirdViewController alloc] init];
     [self.navigationController pushViewController:thirdViewController animated:YES];
     

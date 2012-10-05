@@ -20,7 +20,4 @@
 @property (nonatomic, retain) UIButton *level2_button;
 @property (nonatomic, retain) UIButton *level3_button;
 
-
-// LALA
-
 @end

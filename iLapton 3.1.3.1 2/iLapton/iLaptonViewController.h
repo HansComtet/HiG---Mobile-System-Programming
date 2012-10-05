@@ -21,7 +21,7 @@
 @property (nonatomic, retain) UIButton *btn_Skip;
 @property (nonatomic, retain) UISegmentedControl *segmentedControl;
 
-
+// Change Screen
 @property (nonatomic, retain) iLaptonSecondViewController *secondViewController;
 @property (nonatomic, retain) iLaptonThirdViewController *thirdViewController;
 

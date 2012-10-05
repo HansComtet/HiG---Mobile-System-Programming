@@ -19,19 +19,22 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     
-
-    
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    
     if (self) {
-        // Custom initialization
         
+        // Custom initialization
         NSUserDefaults *lang = [NSUserDefaults standardUserDefaults];
         int language = [lang integerForKey:@"language"];
         
         if (language == 1) {
+            
             [self setTitle:@"Choose level"];
+            
         } else {
+            
             [self setTitle:@"Escoja nivel"];
+            
         }
         
         
@@ -40,10 +43,8 @@
         
         self.view = thirdScreenView;
 
-        
-
-        
     }
+    
     return self;
     
 }
@@ -52,9 +53,8 @@
 -(void)goToLevel:(id)sender {
     
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-
-    
     UIButton *button = (UIButton*)sender;
+    
     if (button.tag == 1) { // level 1
         
         [prefs setObject:@"1" forKey:@"Level"];
@@ -70,7 +70,6 @@
     
     fourthScreenView = [[iLaptonFourthViewController2 alloc] init];
     [self.navigationController pushViewController:fourthScreenView animated:YES];
-    NSLog(@"Link ok");
     
 }
 
