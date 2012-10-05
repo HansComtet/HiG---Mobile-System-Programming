@@ -25,7 +25,10 @@
     [lang setInteger:1 forKey:@"language"];
     
     [self setTitle:@"The iLapton Game"];
-   
+
+    UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    [infoButton addTarget:self action:@selector(showInfo) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:infoButton];
     
     firstScreenView = [[iLapton_FirstScreenView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height):self];
     
