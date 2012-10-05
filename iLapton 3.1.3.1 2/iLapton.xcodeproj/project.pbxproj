@@ -18,6 +18,9 @@
 		40818F30161B6DD80066894B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40818F2F161B6DD80066894B /* AudioToolbox.framework */; };
 		40818F5A161F1A910066894B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 40818F59161F1A910066894B /* Default.png */; };
 		40818F5D161F1A990066894B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 40818F5C161F1A990066894B /* Default@2x.png */; };
+		40818F60161F1C820066894B /* iLaptonInfoScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 40818F5F161F1C820066894B /* iLaptonInfoScreen.m */; };
+		40818F68161F214E0066894B /* infoScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 40818F66161F214E0066894B /* infoScreen.png */; };
+		40818F69161F214E0066894B /* infoScreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 40818F67161F214E0066894B /* infoScreen@2x.png */; };
 		40A12BC71612C67C0097ABC6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40A12BC61612C67C0097ABC6 /* UIKit.framework */; };
 		40A12BC91612C67C0097ABC6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40A12BC81612C67C0097ABC6 /* Foundation.framework */; };
 		40A12BCB1612C67C0097ABC6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40A12BCA1612C67C0097ABC6 /* CoreGraphics.framework */; };
@@ -47,6 +50,10 @@
 		40818F2F161B6DD80066894B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		40818F59161F1A910066894B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		40818F5C161F1A990066894B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		40818F5E161F1C820066894B /* iLaptonInfoScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iLaptonInfoScreen.h; sourceTree = "<group>"; };
+		40818F5F161F1C820066894B /* iLaptonInfoScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iLaptonInfoScreen.m; sourceTree = "<group>"; };
+		40818F66161F214E0066894B /* infoScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = infoScreen.png; sourceTree = "<group>"; };
+		40818F67161F214E0066894B /* infoScreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "infoScreen@2x.png"; sourceTree = "<group>"; };
 		40A12BC21612C67C0097ABC6 /* iLapton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLapton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40A12BC61612C67C0097ABC6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		40A12BC81612C67C0097ABC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -114,6 +121,15 @@
 			name = "3rd screen - Levels";
 			sourceTree = "<group>";
 		};
+		40818F65161F21400066894B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				40818F66161F214E0066894B /* infoScreen.png */,
+				40818F67161F214E0066894B /* infoScreen@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		40A12BB71612C67C0097ABC6 = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +164,7 @@
 		40A12BCC1612C67C0097ABC6 /* iLapton */ = {
 			isa = PBXGroup;
 			children = (
+				40818F65161F21400066894B /* Images */,
 				40A12BD51612C67C0097ABC6 /* iLaptonAppDelegate.h */,
 				40A12BD61612C67C0097ABC6 /* iLaptonAppDelegate.m */,
 				40A12BE61612DE950097ABC6 /* 1st screen - Player name */,
@@ -178,6 +195,8 @@
 				40A12BD91612C67C0097ABC6 /* iLaptonViewController.m */,
 				40A12BE31612C7100097ABC6 /* iLapton_FirstScreenView.h */,
 				40A12BE41612C7100097ABC6 /* iLapton_FirstScreenView.m */,
+				40818F5E161F1C820066894B /* iLaptonInfoScreen.h */,
+				40818F5F161F1C820066894B /* iLaptonInfoScreen.m */,
 			);
 			name = "1st screen - Player name";
 			sourceTree = "<group>";
@@ -252,6 +271,8 @@
 				15AE57C2161C90A10074E2BC /* iLaptonFifthViewController.xib in Resources */,
 				40818F5A161F1A910066894B /* Default.png in Resources */,
 				40818F5D161F1A990066894B /* Default@2x.png in Resources */,
+				40818F68161F214E0066894B /* infoScreen.png in Resources */,
+				40818F69161F214E0066894B /* infoScreen@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +294,7 @@
 				406D2F5B1615BEFC0072C7C0 /* iLapton_ThirdScreenView.m in Sources */,
 				15FC800816192A49003A0F78 /* iLaptonFourthViewController2.m in Sources */,
 				15AE57C1161C90A10074E2BC /* iLaptonFifthViewController.m in Sources */,
+				40818F60161F1C820066894B /* iLaptonInfoScreen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

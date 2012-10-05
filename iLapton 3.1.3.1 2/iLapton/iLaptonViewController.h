@@ -12,8 +12,12 @@
 #import "iLapton_FirstScreenView.h"
 #import "iLaptonSecondViewController.h"
 #import "iLaptonThirdViewController.h"
+#import "iLaptonInfoScreen.h"
 
-@interface iLaptonViewController : UIViewController
+@interface iLaptonViewController : UIViewController {
+    
+    BOOL isInfoAppears;
+}
 
 @property (nonatomic, retain) iLapton_FirstScreenView *firstScreenView;
 @property (nonatomic, retain) UITextField *textField_YourName;
@@ -24,5 +28,7 @@
 // Change Screen
 @property (nonatomic, retain) iLaptonSecondViewController *secondViewController;
 @property (nonatomic, retain) iLaptonThirdViewController *thirdViewController;
+
+@property (nonatomic, retain) iLaptonInfoScreen *infoScreen;
 
 @end

@@ -12,12 +12,14 @@
 
 @synthesize firstScreenView, secondViewController, thirdViewController;
 @synthesize textField_YourName;
-@synthesize btn_Next, btn_Skip, segmentedControl;
+@synthesize btn_Next, btn_Skip, segmentedControl, infoScreen;
 
 #pragma mark - View controller methods
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+    
+    isInfoAppears = NO;
+    
 	// Do any additional setup after loading the view, typically from a nib.
     
     // create a variable that save the current language
@@ -43,13 +45,58 @@
 
     
     self.view = firstScreenView;
+
     
+    [super viewDidLoad];
+
     
     
 }
 
 
 #pragma mark - Main functionality
+
+-(void)showInfo{
+    
+    if (!isInfoAppears) {
+        NSLog(@"hola chica");
+    
+        infoScreen = [[iLaptonInfoScreen alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        [infoScreen setBackgroundColor:[UIColor blackColor]];
+        infoScreen.exclusiveTouch = YES;
+        [firstScreenView addSubview:infoScreen];
+        
+        isInfoAppears = YES;
+        
+        btn_Next.hidden = YES;
+        btn_Skip.hidden = YES;
+        segmentedControl.hidden = YES;
+        textField_YourName.hidden = YES;
+        
+        //hide keyboard
+        [textField_YourName resignFirstResponder];
+
+    }
+    else {
+        [infoScreen removeFromSuperview];
+        isInfoAppears = NO;
+        
+        btn_Next.hidden = NO;
+        btn_Skip.hidden = NO;
+        segmentedControl.hidden = NO;
+        textField_YourName.hidden = NO;
+        
+        // show keyboard
+        [textField_YourName becomeFirstResponder];
+
+    }
+    
+
+
+    
+    
+}
+
 
 -(void)btnNext:(id)sender {
     
