@@ -54,13 +54,13 @@
         [self setTitle:@"Results"];
         lbl_finalLabel1.text = [NSString stringWithFormat: @"Congratulations, %@", playerName_string];
         lbl_finalLabel2.text = [NSString stringWithFormat: @"Your score is: %@", playerScore_string];
-        lbl_topScoreTitle.text = @"TOP 5 Score:";
+        
 
     } else {
-        [self setTitle:@"Hola hola"];
+        [self setTitle:@"Resultado"];
         lbl_finalLabel1.text = [NSString stringWithFormat: @"Felicidades, %@", playerName_string];
         lbl_finalLabel2.text = [NSString stringWithFormat: @"Su puntuación es: %@", playerScore_string];
-        lbl_topScoreTitle.text = @"Hola cerveza llamo chica:";
+        
 
     }
     
@@ -69,7 +69,14 @@
     // New Game - Same User Info
     btn_NewGameSameName = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [btn_NewGameSameName addTarget:self action:@selector(btnNewGameSameName:) forControlEvents:UIControlEventTouchUpInside];
+    
+    if(language == 1)
+    {
     [btn_NewGameSameName setTitle:@"Start new game (same user info)" forState:UIControlStateNormal];
+    }else{
+    [btn_NewGameSameName setTitle:@"Empieza nuevo juego (mismo usuario)" forState:UIControlStateNormal];
+    }
+    
     btn_NewGameSameName.frame = CGRectMake(35.0, 250.0, 120.0, 60.0);
     btn_NewGameSameName.titleLabel.lineBreakMode = UILineBreakModeWordWrap;
     [self.view addSubview:btn_NewGameSameName];
@@ -77,7 +84,14 @@
     // New Game - New User Info
     btn_NewGameDiffName = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [btn_NewGameDiffName addTarget:self action:@selector(btnNewGameNewName:) forControlEvents:UIControlEventTouchUpInside];
+    if(language == 1)
+    {
     [btn_NewGameDiffName setTitle:@"Start new game (new user info)" forState:UIControlStateNormal];
+    }
+    else
+    {
+    [btn_NewGameDiffName setTitle:@"Empezar nuevo juego (nuevo usuario)" forState:UIControlStateNormal];
+    }
     btn_NewGameDiffName.frame = CGRectMake(165.0, 250.0, 120.0, 60.0);
     btn_NewGameDiffName.titleLabel.lineBreakMode = UILineBreakModeWordWrap;
     [self.view addSubview:btn_NewGameDiffName];
